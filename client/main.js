@@ -1,2 +1,2 @@
-import '/imports/startup/client/router';
+import '/imports/startup/client';
 

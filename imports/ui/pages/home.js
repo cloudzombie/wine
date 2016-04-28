@@ -1,5 +1,7 @@
 import './home.html';
 
+import '../components/winelist.js'
+
 
 Template.welcome.onCreated(function helloOnCreated() {
     // counter starts at 0

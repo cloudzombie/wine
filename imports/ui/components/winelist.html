@@ -5,24 +5,15 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-                <div class="list-group-item">
-                    <div class="row-content">
-                        <p class="list-group-item-text">Maecenas</p>
-                    </div>
-                </div>
 
-                <div class="list-group-item">
-                    <div class="row-content">
-                        <p class="list-group-item-text">Schlabber</p>
+                {{#each wine in wines}}
+                    <div class="list-group-item">
+                        <div class="row-content">
+                            <p class="list-group-item-text">{{wine.name}}</p>
+                        </div>
                     </div>
-                </div>
+                {{/each}}
 
-
-                <div class="list-group-item">
-                    <div class="row-content">
-                        <p class="list-group-item-text">Plörre</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

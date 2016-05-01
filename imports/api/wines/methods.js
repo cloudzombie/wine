@@ -17,3 +17,33 @@ export const remove = new ValidatedMethod({
 });
 
 
+export const fixtureAddSomeWines = new ValidatedMethod({
+   name: 'wines.fixtureAddSomeWines',
+
+   validate: null,
+
+   run() {
+       console.log("Adding some wines ...");
+
+       const data = [
+           {
+               name: 'Schlürf'
+           },
+           {
+               name: 'Lecker'
+           },
+           {
+               name: 'Plörre'
+           },
+       ];
+
+
+       data.forEach((wine) => {
+           const listId = Wines.insert({
+               name: wine.name,
+           });
+       });
+   }
+});
+
+

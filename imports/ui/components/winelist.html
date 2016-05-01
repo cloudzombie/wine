@@ -5,16 +5,22 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-
-                {{#each wine in wines}}
-                    <div class="list-group-item">
-                        <div class="row-content">
-                            <p class="list-group-item-text">{{wine.name}}</p>
-                        </div>
-                    </div>
+                {{#each wines}}
+                    {{> wine}}
                 {{/each}}
-
             </div>
+        </div>
+    </div>
+</template>
+
+<template name="wine">
+    <div class="list-group-item">
+        <div class="row-content">
+            <div class="least-content">
+                <a href="" class="btn btn-danger" id="deleteWine"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            </div>
+            <p class="list-group-item-text">{{name}}</p>
+
         </div>
     </div>
 </template>

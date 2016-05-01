@@ -16,6 +16,16 @@ export const remove = new ValidatedMethod({
     }
 });
 
+export const insert = new ValidatedMethod({
+    name: 'wines.insert',
+    
+    validate: null,
+    
+    run({ wine }) {
+        Wines.insert(wine);
+    }
+});
+
 
 export const fixtureAddSomeWines = new ValidatedMethod({
    name: 'wines.fixtureAddSomeWines',

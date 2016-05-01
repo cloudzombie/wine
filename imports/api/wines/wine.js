@@ -1,3 +1,4 @@
+import { insert } from './methods.js';
 
 export const Wines = new Mongo.Collection("wines",
     {
@@ -18,6 +19,14 @@ export class Wine {
         }
         if (typeof source === 'object') { // inject class methods in plain collection document
             _.extend(this, source);
+        }
+    }
+
+    save () {
+        if (this._id && this._id != "") {
+            // TODO update
+        } else {
+            insert.call({wine: this});
         }
     }
 };

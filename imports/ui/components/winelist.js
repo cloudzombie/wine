@@ -4,9 +4,8 @@ import { Mongo } from 'meteor/mongo';
 
 import './winelist.html';
 
-import { Wines, Wine } from '/imports/api/wines/wine.js';
-
-import { remove } from '/imports/api/wines/methods.js';
+import { Wines, Wine } from '../../api/wines/wine.js';
+import { remove } from '../../api/wines/methods.js';
 
 Template.wineList.onCreated(function() {
    this.subscribe('wines');

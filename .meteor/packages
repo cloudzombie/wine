@@ -21,3 +21,4 @@ fezvrasta:bootstrap-material-design
 kadira:flow-router
 kadira:blaze-layout
 mdg:validated-method
+arillo:flow-router-helpers

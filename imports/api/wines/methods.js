@@ -37,20 +37,25 @@ export const fixtureAddSomeWines = new ValidatedMethod({
 
        const data = [
            {
-               name: 'Schlürf'
+               name: 'Schlürf',
+               notes: 'Sehr leckeres Tröpfchen aus der Pfalz. Ein schöner trockener Riesling, 2013.'
            },
            {
-               name: 'Lecker'
+               name: 'Lecker',
+               notes: 'Anbauregion:	D.O.Ca Rioja; Weingut:	Baron de Ley; Typus:	Rotwein; Rebsorte:	100% Tempranillo; Ausbau:	20 Monate in Barriques aus amerikanischer und 24 Monate auf der Flasche',
+
            },
            {
-               name: 'Plörre'
+               name: 'Plörre',
+               notes: 'Billiger Fusel vom Aldi. Weißwein; Müllert-Thurgau; 1,98€',
            },
        ];
 
 
        data.forEach((wine) => {
-           const listId = Wines.insert({
+           Wines.insert({
                name: wine.name,
+               notes: wine.notes,
            });
        });
    }

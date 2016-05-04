@@ -1,11 +1,17 @@
 <template name="createWine">
-    <h1>New Wein</h1>
 
     <div class="well">
+        <legend>New Wine</legend>
         <div class="form-group label-floating">
             <label class="control-label" for="id_winename">Wine Name</label>
             <input class="form-control" id="id_winename" type="text">
         </div>
+
+        <div class="form-group label-floating">
+            <label class="control-label" for="id_winenotes">Notes</label>
+            <textarea class="form-control" rows="5" id="id_winenotes"></textarea>
+        </div>
+
         <br>
         <a href="" class="btn btn-primary btn-raised" id="btnAdd">
             <span class="glyphicon glyphicon-plus" aria-hidden="true" aria-label="Add"></span>
